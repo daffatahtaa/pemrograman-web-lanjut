@@ -214,9 +214,362 @@
                                 
                                 <h1 id="jobsheet-5">Jobsheet 5</h1>
 <h3 id="praktikum-1-directive">Praktikum 1 :Directive</h3>
+<blockquote>
+<p>Directive adalah attribute yang biasanya berawalan dengan prefix <strong>ng-</strong> dan berfungsi sebagai <strong>marker</strong> layaknya class dan id ataupun sebagai <strong>event driven</strong>. Bisa dikatakan juga bahwa directive adalah tag-khusunya si Angular. Directive digunakan untuk modifikasi DOM, ada 2 cara untuk memodifikasi directive yaitu directive degan <strong>directive structural</strong> dan <strong>directive attribute</strong>. Jika menggunakan directive struktural maka yang dimodifikasi adalah struktur DOM sedangkan jika directive attribute maka yang dimodifikasi adalah attribute DOM. Ada beberapa macam directive yang akan di gunakan dalam Jobsheet 5 ini.</p>
+</blockquote>
+<h3 id="ngif">ngIF</h3>
+<blockquote>
+<p>Directive ngIf digunakan untuk sebuah kondisi percabangan. Ada beberapa contoh penggunaan <strong>ngIF</strong>.</p>
+</blockquote>
 <ul>
-<li>ngIf
-Directive ngIf digunakan untuk sebuah kondisi percabangan.</li>
+<li><p>Buka file <strong>app.component.ts</strong>.
+![]</p>
+</li>
+<li><p>Buka file <strong>app.component.html</strong>.
+![]</p>
+</li>
+<li><p>Jalankan server maka hasilnya akan seperti berikut.
+![]</p>
+</li>
+<li><p>Jika pada <strong>app.component.ts (courses=[];)</strong> di kosongkan maka hasilnya.
+![]</p>
+</li>
+<li><p>Jalankan server dengan kondisi array pada <strong>app.component</strong></p>
+</li>
+<li><p>Dengan array kosong:
+![]</p>
+</li>
+<li><p>Dengan array ada isinya:
+![]</p>
+</li>
+</ul>
+<p>cara ketiga :</p>
+<ul>
+<li><p>Buka file <strong>app.component.html</strong> modifikasi code sehingga menjadi seperti berikut.
+![]</p>
+</li>
+<li><p>Jalankan server dengan kondisi array pada <strong>app.component</strong></p>
+</li>
+<li><p>Dengan array kosong.
+![]</p>
+</li>
+<li><p>Dengan array yang di isi.
+![]</p>
+</li>
+</ul>
+<h3 id="hidden-property">Hidden Property</h3>
+<blockquote>
+<p>Selain menggunakan directive ngIF kita juga dapat menggunakan property <strong>Hidden</strong> untuk menampilkan salah satu data. Jika menggunakan ngIF element yang bernilai salah atau false akan di hilangkan dari DOM. Sedangkan jika menggunakan <strong>Hidden Property</strong> jika element tersebut bernilai true maka element tersebut yang akan di hide.</p>
+</blockquote>
+<ul>
+<li><p>Buka <strong>app.component.html</strong>
+![]</p>
+</li>
+<li><p>Jalankan server maka hasilnya seperti :
+![]</p>
+</li>
+<li><p>Selain contoh diatas kita dapat memberikan property seperti berikut.
+![]</p>
+<blockquote>
+<p>Catatan : pada <strong>app.component.ts</strong> pada courses terdapat array courses dengan nilai 1 dan 2.</p>
+</blockquote>
+</li>
+<li><p>Jalankan server (berbeda hasil jika pada array courses tidak terdapat isinya).
+![]</p>
+</li>
+<li><p>Jika di inspect element maka akan terlihat <strong>Property hidden</strong> tidak terdapat kondisi true atau false.
+![]</p>
+</li>
+<li><p>Berbeda jika menggunakan <strong>ngIF</strong> terdapat <strong>bindings</strong> dengan nilai false.
+![]</p>
+</li>
+</ul>
+<h3 id="ngswitchcase">ngSwitchCase</h3>
+<blockquote>
+<p>Menyediakan ekspresi switch untuk menyamakan dengan ekspresi <strong>ngSwitch</strong> yang tersedia. Ketika ekspresi sama, maka template <strong>ngSwitchCase</strong> menampilkan.</p>
+</blockquote>
+<ul>
+<li><p>Buka file <strong>app.component.html</strong> lalu modifikasi codenya menjadi serperti berikut.
+![]</p>
+<blockquote>
+<p><strong>Penjelasan Code</strong>:</p>
+<ol>
+<li>Line 45 terdapat **event binding (click) = &quot;viewMode=&apos;list&apos;&quot;.</li>
+<li>Line 47 pada tag a ditambah <strong>class binding</strong>.</li>
+<li>Line 52 pada tag div teradapat <strong>property binding [ngSwitch]</strong>.</li>
+<li>Line 53, 54 , 55 pada tag div ditambah <strong>directive ngSwitchCase</strong>.</li>
+</ol>
+</blockquote>
+</li>
+<li><p>Buka file <strong>app.component.ts</strong> tambahkan <strong>property viewMode (line 12)</strong>.
+![]</p>
+</li>
+<li><p>Jalankan server maka hasilnya akan seperti berikut saat di click <strong>List view</strong> maka akan muncul list view contect dan jika kita pilih <strong>Map view</strong> maka akan tampil map view.
+![]</p>
+</li>
+</ul>
+<h3 id="ngfor">ngFor</h3>
+<blockquote>
+<p>ngFor adalah sebuah directive pada angular yang berfungsi untuk melakukan looping terhadap beberapa data misal data kita adalah sebuah array. Jadi directive ini akan melooping array kita pada bagian template.</p>
+</blockquote>
+<ul>
+<li><p>Buka <strong>app.component.ts</strong> property CoursesFor yang berisikan array (Line 12).
+![]</p>
+</li>
+<li><p>Buka file <strong>app.component.html</strong> tambahkan directive ngFor pada element <strong>li</strong>.
+![]</p>
+<blockquote>
+<p><strong>Penjelasan Code</strong>:</p>
+<ol>
+<li>Line 59 terdapat directive ngFor dengan let item dari property courseFor pada <strong>app.component.ts</strong> dan dengan index alias i.</li>
+<li>Line 60 adalah String interpolasi.</li>
+</ol>
+</blockquote>
+</li>
+<li><p>Jika dijalankan maka hasilnya seperti berikut.
+![]</p>
+</li>
+<li><p>Kita juga dapat memberikan tanda tertentu pada index yang bernilai ganjil dengan menggunakan isEven.
+![]</p>
+</li>
+</ul>
+<h3 id="ngfor-dan-change-detection">ngFor dan Change Detection</h3>
+<blockquote>
+<p>Dengan memodifikasi directive ngFor kita dapat melakukan penambahan atau pengurangan data.</p>
+</blockquote>
+<ul>
+<li><p>Pada percobaan ini kita tambahkan sebuah data array pada <strong>coursesFor</strong>.</p>
+</li>
+<li><p>Tambahkan method <strong>onAdd()</strong>.
+![]</p>
+<blockquote>
+<p><strong>Penjelasan Code</strong>:</p>
+<ol>
+<li>Line 22 - 24 adalah sebuah method yang di gunakan untuk melakukan push data (id:6, name:&apos;courses6&apos;) ke coursesFor.</li>
+</ol>
+</blockquote>
+</li>
+<li><p>Sehingga hasilnya seperti berikut (jika kita tekan button add maka akan ditambahkan sebuah data courses 6).</p>
+</li>
+<li><p>Setelah kita berhasil menambahkan sebuah data array pada courseFor maka untuk selanjutnya kita akan mencoba untuk melakukan penghapusan data.</p>
+</li>
+<li><p>Tambahkan sebuah method <strong>onRemove</strong> pada <strong>app.component.ts</strong>.
+![]</p>
+<blockquote>
+<p><strong>Penjalasan Code</strong>:</p>
+<ol>
+<li>Line 26 sebuah method dengan parameter item. Jika kita <strong>console.log (item)</strong> maka hasilnya pada saat kita hapus salah satu data maka hasilnya akan seperti berikut :
+![]</li>
+<li>Line 27 sebuah variable baru dengan nama index bertipe data number. Untuk lebih jelas kita bisa tambahkan <strong>console.log(index)</strong> pada method onRemove dan hasilnya pada saat kita hapus salah satu data maka akan jadi seperti berikut :
+![]</li>
+</ol>
+</blockquote>
+</li>
+<li><p>Buka <strong>app.component.html</strong> dan tambahkan sebuah button untuk menghapus (line 69).</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> (<span class="hljs-attr">click</span>) =<span class="hljs-string">&quot;onRemove(item)&quot;</span>&gt;</span> Remove Item <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+</code></pre>
+<blockquote>
+<p><strong>Penjelasan Code</strong>:</p>
+<ol>
+<li>Line 69 adalah sebuah button dimana terdapat event click yang memanggil method onRemove dengan parameter item.</li>
+</ol>
+</blockquote>
+</li>
+<li><p>Hasilnya seperti berikut (pada saat button remove di click maka salah satu data akan hilang sementara).</p>
+</li>
+<li><p>Selain itu kita juga dapat melakukan perubahan status menggunakan event click.</p>
+</li>
+<li><p>Buka file <strong>app.component.html</strong> tambahkan button</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;onChange(item)&quot;</span>&gt;</span> Update <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+</code></pre>
+<blockquote>
+<p><strong>Penjelasan Code</strong>:</p>
+<ol>
+<li>Pada 70 terdapat sebuah button dan event click dimana event click ini memanggil method onChange dengan parameter item.</li>
+</ol>
+</blockquote>
+</li>
+<li><p>Buka file <strong>app.component.ts</strong> buatlah sebuah method onChange dengan parameter item dan di dalam method tersebut adanya perubahan string menjadi updated.</p>
+</li>
+</ul>
+<p>-Hasilnya :
+![]</p>
+<h3 id="ngfor-dan-trackby">ngFor dan Trackby</h3>
+<blockquote>
+<p>Pada studi kasus ini kita akan menampilkan isi array saat button di click. Permasalahan yang muncul jika button di click tersebut diclick berkali-kali, maka secara tidak langsung data akan me reload ulang.</p>
+</blockquote>
+<ul>
+<li><p>Buka file <strong>app.component.ts</strong> buatlah sebuah method dengan nama <strong>loadCourses</strong> (Line 38), tetapi sebelumnya buatlah sebuah property dengan nama **coursesForOne (Line 37).
+![]</p>
+</li>
+<li><p>Buka file <strong>app.component.html</strong> dan tambahkan code.</p>
+</li>
+</ul>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;loadCourses()&quot;</span>&gt;</span>Tampilkan data<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">li</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let itemone of coursesForOne&quot;</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+</code></pre>
+<ul>
+<li><p>Hasil:
+![]</p>
+</li>
+<li><p>Sekarang lakukan analisa dengan menggunakan inspect element, saat button di click seperti pada gambar.
+![]</p>
+</li>
+<li><p>Pada saat button di click maka element <strong>ul</strong> akan muncul seperti pada gambar berikut:
+![]</p>
+</li>
+<li><p>Jika melakukan click kembali maka button akan merespon kembali dengan menampilkan data yang sudah ada dalam arti mengunduh ulang yang sudah ada.</p>
+<blockquote>
+<p>Jika kita lakukan click kembali maka pada inspect element akan muncul highlight warna ungu dimasing-masing element li.</p>
+</blockquote>
+</li>
+<li><p>Oleh karena itu kita membutuhkan <strong>TrackBy</strong> yang nantinya digunakan untuk mengecek jika data yang sudah ada maka button tidak perlu melakukan actionnya kembali.</p>
+</li>
+<li><p>Untuk menambahkan <strong>TrackBy</strong> dengan cara menambahkan pada <strong>app.component.html</strong> pada <strong>directive ngFor</strong>.</p>
+</li>
+</ul>
+<p>![]</p>
+<ul>
+<li><p>Selain itu tambahkan juga sebuah method <strong>trackCourse</strong> dengan parameter <strong>index</strong> dan <strong>itmeone</strong> pada <strong>app.component.ts</strong>.</p>
+<pre><code class="lang-html">trackCourse(index,itemone){
+  return itemone ? itemone.id : undefined;
+}
+</code></pre>
+<blockquote>
+<p>Penjelasan Code:</p>
+<ol>
+<li>Line 48 Sebuah nilai kembalian jika itemone bernilai <strong>true</strong> maka itemone.id akan ditampilkan dan jika itemone bernilai <strong>false</strong> maka itemone tidak terdefinisi.</li>
+</ol>
+</blockquote>
+</li>
+<li><p>Jika berhasil maka pada saat button tampilkan data di click untuk kedua kalinya pada inspect element tidak akan muncul highlight ungu pada masing masing element li.</p>
+</li>
+</ul>
+<h3 id="the-leading-asterik">The leading Asterik</h3>
+<blockquote>
+<p>Leading asterik adalah tanda asterisk yang ada pada directive seperti <strong>*ngFor</strong> dsb. Adapun maksud leading asterisk pada sebuah directive adalah bahwa kita memberitahu angular untuk menulis ulang markup tertentu seperti code berikut.</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">&quot;courses.length&gt;0&quot;</span>&gt;</span>
+    List of courses
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<p>Pada code diatas terdapat sebuah directive <strong>*ngif</strong> dimana fungsi dari asterisk pada ngIf adalah memberi tahu angular untuk menulis ulang markup dari div tersebut menggunakan ng template dengan menggunakan property binding pada code dibawah.</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> [<span class="hljs-attr">ngIf</span>]=<span class="hljs-string">&quot;courses.length&gt;0&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+        list of courses
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
+</code></pre>
+</blockquote>
+<h3 id="ngclass">ngClass</h3>
+<blockquote>
+<p>Jika pada percobaan sebelumnya kita membuat component favorite menggunakan 2 class binding yaitu class binding <strong>fa-star</strong> dan <strong>fa-sat-o</strong> seperti pada code dibawah.</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>
+<span class="hljs-attr">class</span>=<span class="hljs-string">&quot;fa&quot;</span>
+[<span class="hljs-attr">class.fa-star</span>]=<span class="hljs-string">&quot;isSelected&quot;</span>
+[<span class="hljs-attr">class.fa-star-o</span>]=<span class="hljs-string">&quot;!isSelected&quot;</span>
+(<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;onClickAlias()&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+</code></pre>
+<p>Selain menggunakan class binding seperti code diatas dapat menggunakan attribute directive class seperti berikut.</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>
+<span class="hljs-attr">class</span>=<span class="hljs-string">&quot;fa&quot;</span>
+[<span class="hljs-attr">ngClass</span>]=<span class="hljs-string">&quot;{
+    &apos;fa-star&apos; : isSelected,
+    &apos;fa-star-o&apos; : !isSelected
+}&quot;</span>
+(<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;onClickAlias()&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+</code></pre>
+</blockquote>
+<h3 id="custom-directive">Custom Directive</h3>
+<blockquote>
+<p>Pada directive kita juga dapat membuat sebuah custom directive, sebagai contoh kita ingin membuat semua inputan pada textbox secara otomastis menjadi lowercase.</p>
+</blockquote>
+<ul>
+<li>Pertama buatlah directive dengan nama input-format terlebih dahulu dengan perintah.</li>
+</ul>
+<blockquote>
+<p>ng g d input-format</p>
+<p><strong>Penjelasan</strong>:</p>
+<ul>
+<li>ng g d input-format =&gt; <strong>ng generate directive (nama-directivenya)</strong>.</li>
+</ul>
+</blockquote>
+<ul>
+<li><p>Jika directive berhasil di generate maka di pastikan di <strong>app.module.ts</strong> pada @NgModule terdapat nama directivenya yang di buat tadi.</p>
+</li>
+<li><p>Buka <strong>input-format.directive.ts</strong> dan tambahkan decorator HostListener.
+![]</p>
+</li>
+</ul>
+<blockquote>
+<p><strong>Penjelasan Code</strong>:</p>
+<ol>
+<li>Line 1 kita tambahkan (import) sebuah fungsi decorator HostListener agar dapat menggunakan event DOM yang menyediakan method untuk menangani sebuah event yang sedang berjalan. Untuk lebih jelasnya penggunaan HostListener buatlah 2 method dengan nama onFocus dan onBlur.</li>
+<li>Line 8 adalah sebuah method onFocus dengan menggunakan function decorator @HostListener dengan parameter event windows focus.</li>
+<li>Line 9 Sebuah method onBlur dengan menggunakan function decorator @HostListener dengan parameter event windows blur.</li>
+</ol>
+</blockquote>
+<ul>
+<li><p>Buka <strong>file.component.html</strong> dan tambahkan code berikut.</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+&amp;nbsp;<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">appInputFormat</span>&gt;</span>
+</code></pre>
+<blockquote>
+<p><strong>Penjelasan Code</strong>:
+Line 89 terdapat appInputFormat adalah selector pada <strong>input-format.directive.ts</strong></p>
+</blockquote>
+</li>
+<li><p>Jalankan server. Setelah itu lakukan percobaan click pada textbox dan di luar textbox. Amati dengan menggunakan console pada inspect element. Pada saat di click pada textbox maka pada console akan muncul onFocus tetapi jika click di luar textbox akan keluar onBlur.</p>
+</li>
+<li><p>Setelah memahami fungsi dari decorator @HostListener maka untuk berikutnya akan mencoba membuat logika untuk merubah value dar textbox menjadi lowercase.</p>
+</li>
+<li><p>Buka file <strong>input-format.directive.ts</strong> dan modifikasi codenya menjadi seperti berikut.
+![]</p>
+</li>
+</ul>
+<blockquote>
+<p><strong>Penjelasan Code</strong>:</p>
+<ol>
+<li>Line 8 Kita membutuhkan sebuah refernce untuk ke host element maka kita tambahkan (inject) pada constructor refence object ElementRef (digunakna untuk mengakses DOM object).</li>
+<li>Line 11 sebuat property dengan nama value dengan tipe data string yang berisi sebuah property nativeElement pada class ElementRef.</li>
+<li>Line 12 untuk merubah inputan menjadi huruf kecil semua.</li>
+</ol>
+</blockquote>
+<ul>
+<li><p>Jalankan server lalu berikan inputan dengan huruf besar semua setelah itu tekan tab, jika berhasil maka valuenya akan berubah menjadi huruf kecil.</p>
+</li>
+<li><p>Atau bisa menggunakan cara lain dengan menggunakan <strong>property binding</strong>.</p>
+</li>
+<li><p>Buka file <strong>app.component.html</strong> dan tambahkan property binding dengan nama format.
+![]</p>
+</li>
+<li><p>Buka file <strong>input-format.directive.ts</strong> tambahkan decorator input dan modifikasi codenya seperti gambar berikut.
+![]</p>
+<blockquote>
+<p><strong>Penjelasan Code</strong>:</p>
+<ol>
+<li>Line 7 adalah sebuah decorator input dengan nama property format.</li>
+<li>Line 14 - 16 adalah sebuah kondisi dimana jika format sama dengan lowercase maka semua inputan akan dibuat menjadi huruf besar sedangkan jika inputan huruf besar akan di jadikan huruf kecil.
+Cat : format disini adalah kondisi di <strong>app.component.html</strong>.</li>
+</ol>
+</blockquote>
+</li>
+<li><p>ataupun juga dapat menggunakan cara lain yaitu menggunakan nama selector sebagai property binding.</p>
+</li>
+<li><p>Buka <strong>app.component.html</strong> modifikasi codenya menjadi berikut.
+![]</p>
+</li>
+<li><p>buka <strong>input-format.directive.ts</strong> dan tambahkan decorator input dengan parameter appInputFormat.</p>
+<pre><code class="lang-html">export class InputFormatDirective{
+  // @Input(&apos;format&apos;)format;
+  @input(&apos;appInputFormat&apos;)format;
+}
+</code></pre>
+</li>
+<li><p>Jika dijalankan sebagai contoh masukkan kalimat dengan huruf kecil dan pada saat kita tab akan menjadi huruf besar.
+![]</p>
+</li>
 </ul>
 
                                 
@@ -261,7 +614,7 @@ Directive ngIf digunakan untuk sebuah kondisi percabangan.</li>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Praktikum 5","level":"1.5","depth":1,"next":{"title":"Praktikum 6","level":"1.6","depth":1,"path":"6.md","ref":"6.md","articles":[]},"previous":{"title":"Praktikum 4","level":"1.4","depth":1,"path":"4.md","ref":"4.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"5.md","mtime":"2019-03-23T16:50:31.453Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-23T16:51:16.509Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Praktikum 5","level":"1.5","depth":1,"next":{"title":"Praktikum 6","level":"1.6","depth":1,"path":"6.md","ref":"6.md","articles":[]},"previous":{"title":"Praktikum 4","level":"1.4","depth":1,"path":"4.md","ref":"4.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"5.md","mtime":"2019-03-24T19:38:23.583Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-24T19:38:28.532Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
