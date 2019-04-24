@@ -167,6 +167,32 @@
             
         </li>
     
+        <li class="chapter " data-level="1.7" data-path="8.html">
+            
+                <a href="8.html">
+            
+                    
+                    Praktikum 8
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="9.html">
+            
+                <a href="9.html">
+            
+                    
+                    Praktikum 9
+            
+                </a>
+            
+
+            
+        </li>
+    
 
     
 
@@ -223,38 +249,42 @@
 </blockquote>
 <ul>
 <li><p>Buka file <strong>app.component.ts</strong>.
-![]</p>
+<img src="img/05/1.png" alt=""></p>
 </li>
 <li><p>Buka file <strong>app.component.html</strong>.
-![]</p>
+<img src="img/05/2.png" alt=""></p>
 </li>
-<li><p>Jalankan server maka hasilnya akan seperti berikut.
-![]</p>
+<li><p>Jalankan server maka hasilnya akan menunjukkan <strong>list of courses</strong>.</p>
 </li>
-<li><p>Jika pada <strong>app.component.ts (courses=[];)</strong> di kosongkan maka hasilnya.
-![]</p>
+<li><p>Jika pada <strong>app.component.ts (courses=[];)</strong> di kosongkan maka hasilnya <strong>no courses yet</strong>.</p>
+</li>
+</ul>
+<p>Cara kedua dengan menggunakan else :</p>
+<ul>
+<li><p>Buka file <strong>app.component.html</strong> lalu modifikasi kodenya menjadi berikut
+<img src="img/05/5.png" alt=""></p>
 </li>
 <li><p>Jalankan server dengan kondisi array pada <strong>app.component</strong></p>
 </li>
 <li><p>Dengan array kosong:
-![]</p>
+<img src="img/05/4.png" alt=""></p>
 </li>
 <li><p>Dengan array ada isinya:
-![]</p>
+<img src="img/05/3.png" alt=""></p>
 </li>
 </ul>
 <p>cara ketiga :</p>
 <ul>
 <li><p>Buka file <strong>app.component.html</strong> modifikasi code sehingga menjadi seperti berikut.
-![]</p>
+<img src="img/05/6.png" alt=""></p>
 </li>
 <li><p>Jalankan server dengan kondisi array pada <strong>app.component</strong></p>
 </li>
 <li><p>Dengan array kosong.
-![]</p>
+<img src="img/05/4.png" alt=""></p>
 </li>
 <li><p>Dengan array yang di isi.
-![]</p>
+<img src="img/05/3.png" alt=""></p>
 </li>
 </ul>
 <h3 id="hidden-property">Hidden Property</h3>
@@ -263,25 +293,23 @@
 </blockquote>
 <ul>
 <li><p>Buka <strong>app.component.html</strong>
-![]</p>
+<img src="img/05/7.png" alt=""></p>
 </li>
 <li><p>Jalankan server maka hasilnya seperti :
-![]</p>
+<img src="img/05/4.png" alt=""></p>
 </li>
 <li><p>Selain contoh diatas kita dapat memberikan property seperti berikut.
-![]</p>
+<img src="img/05/8.png" alt=""></p>
 <blockquote>
 <p>Catatan : pada <strong>app.component.ts</strong> pada courses terdapat array courses dengan nilai 1 dan 2.</p>
 </blockquote>
 </li>
 <li><p>Jalankan server (berbeda hasil jika pada array courses tidak terdapat isinya).
-![]</p>
+<img src="img/05/4.png" alt=""></p>
 </li>
-<li><p>Jika di inspect element maka akan terlihat <strong>Property hidden</strong> tidak terdapat kondisi true atau false.
-![]</p>
+<li><p>Jika di inspect element maka akan terlihat <strong>Property hidden</strong> tidak terdapat kondisi true atau false.</p>
 </li>
-<li><p>Berbeda jika menggunakan <strong>ngIF</strong> terdapat <strong>bindings</strong> dengan nilai false.
-![]</p>
+<li><p>Berbeda jika menggunakan <strong>ngIF</strong> terdapat <strong>bindings</strong> dengan nilai false.</p>
 </li>
 </ul>
 <h3 id="ngswitchcase">ngSwitchCase</h3>
@@ -290,7 +318,7 @@
 </blockquote>
 <ul>
 <li><p>Buka file <strong>app.component.html</strong> lalu modifikasi codenya menjadi serperti berikut.
-![]</p>
+<img src="img/05/9.png" alt=""></p>
 <blockquote>
 <p><strong>Penjelasan Code</strong>:</p>
 <ol>
@@ -302,10 +330,10 @@
 </blockquote>
 </li>
 <li><p>Buka file <strong>app.component.ts</strong> tambahkan <strong>property viewMode (line 12)</strong>.
-![]</p>
+<img src="img/05/10.png" alt=""></p>
 </li>
 <li><p>Jalankan server maka hasilnya akan seperti berikut saat di click <strong>List view</strong> maka akan muncul list view contect dan jika kita pilih <strong>Map view</strong> maka akan tampil map view.
-![]</p>
+<img src="img/05/11.png" alt=""></p>
 </li>
 </ul>
 <h3 id="ngfor">ngFor</h3>
@@ -314,10 +342,10 @@
 </blockquote>
 <ul>
 <li><p>Buka <strong>app.component.ts</strong> property CoursesFor yang berisikan array (Line 12).
-![]</p>
+<img src="img/05/12.png" alt=""></p>
 </li>
 <li><p>Buka file <strong>app.component.html</strong> tambahkan directive ngFor pada element <strong>li</strong>.
-![]</p>
+<img src="img/05/13.png" alt=""></p>
 <blockquote>
 <p><strong>Penjelasan Code</strong>:</p>
 <ol>
@@ -327,10 +355,10 @@
 </blockquote>
 </li>
 <li><p>Jika dijalankan maka hasilnya seperti berikut.
-![]</p>
+<img src="img/05/14.png" alt=""></p>
 </li>
 <li><p>Kita juga dapat memberikan tanda tertentu pada index yang bernilai ganjil dengan menggunakan isEven.
-![]</p>
+<img src="img/05/15.png" alt=""></p>
 </li>
 </ul>
 <h3 id="ngfor-dan-change-detection">ngFor dan Change Detection</h3>
@@ -341,7 +369,7 @@
 <li><p>Pada percobaan ini kita tambahkan sebuah data array pada <strong>coursesFor</strong>.</p>
 </li>
 <li><p>Tambahkan method <strong>onAdd()</strong>.
-![]</p>
+<img src="img/05/16.png" alt=""></p>
 <blockquote>
 <p><strong>Penjelasan Code</strong>:</p>
 <ol>
@@ -354,14 +382,14 @@
 <li><p>Setelah kita berhasil menambahkan sebuah data array pada courseFor maka untuk selanjutnya kita akan mencoba untuk melakukan penghapusan data.</p>
 </li>
 <li><p>Tambahkan sebuah method <strong>onRemove</strong> pada <strong>app.component.ts</strong>.
-![]</p>
+<img src="img/05/17.png" alt=""></p>
 <blockquote>
 <p><strong>Penjalasan Code</strong>:</p>
 <ol>
 <li>Line 26 sebuah method dengan parameter item. Jika kita <strong>console.log (item)</strong> maka hasilnya pada saat kita hapus salah satu data maka hasilnya akan seperti berikut :
-![]</li>
+<img src="img/05/18.png" alt=""></li>
 <li>Line 27 sebuah variable baru dengan nama index bertipe data number. Untuk lebih jelas kita bisa tambahkan <strong>console.log(index)</strong> pada method onRemove dan hasilnya pada saat kita hapus salah satu data maka akan jadi seperti berikut :
-![]</li>
+<img src="img/05/19.png" alt=""></li>
 </ol>
 </blockquote>
 </li>
@@ -393,14 +421,14 @@
 </li>
 </ul>
 <p>-Hasilnya :
-![]</p>
+<img src="img/05/21.png" alt=""></p>
 <h3 id="ngfor-dan-trackby">ngFor dan Trackby</h3>
 <blockquote>
 <p>Pada studi kasus ini kita akan menampilkan isi array saat button di click. Permasalahan yang muncul jika button di click tersebut diclick berkali-kali, maka secara tidak langsung data akan me reload ulang.</p>
 </blockquote>
 <ul>
 <li><p>Buka file <strong>app.component.ts</strong> buatlah sebuah method dengan nama <strong>loadCourses</strong> (Line 38), tetapi sebelumnya buatlah sebuah property dengan nama **coursesForOne (Line 37).
-![]</p>
+<img src="img/05/22.png" alt=""></p>
 </li>
 <li><p>Buka file <strong>app.component.html</strong> dan tambahkan code.</p>
 </li>
@@ -412,13 +440,12 @@
 </code></pre>
 <ul>
 <li><p>Hasil:
-![]</p>
+<img src="img/05/23.png" alt=""></p>
 </li>
-<li><p>Sekarang lakukan analisa dengan menggunakan inspect element, saat button di click seperti pada gambar.
-![]</p>
+<li><p>Sekarang lakukan analisa dengan menggunakan inspect element, saat button di click.</p>
 </li>
 <li><p>Pada saat button di click maka element <strong>ul</strong> akan muncul seperti pada gambar berikut:
-![]</p>
+<img src="img/05/24.png" alt=""></p>
 </li>
 <li><p>Jika melakukan click kembali maka button akan merespon kembali dengan menampilkan data yang sudah ada dalam arti mengunduh ulang yang sudah ada.</p>
 <blockquote>
@@ -430,7 +457,7 @@
 <li><p>Untuk menambahkan <strong>TrackBy</strong> dengan cara menambahkan pada <strong>app.component.html</strong> pada <strong>directive ngFor</strong>.</p>
 </li>
 </ul>
-<p>![]</p>
+<p><img src="img/05/25.png" alt=""></p>
 <ul>
 <li><p>Selain itu tambahkan juga sebuah method <strong>trackCourse</strong> dengan parameter <strong>index</strong> dan <strong>itmeone</strong> pada <strong>app.component.ts</strong>.</p>
 <pre><code class="lang-html">trackCourse(index,itemone){
@@ -499,7 +526,7 @@
 <li><p>Jika directive berhasil di generate maka di pastikan di <strong>app.module.ts</strong> pada @NgModule terdapat nama directivenya yang di buat tadi.</p>
 </li>
 <li><p>Buka <strong>input-format.directive.ts</strong> dan tambahkan decorator HostListener.
-![]</p>
+<img src="img/05/26.png" alt=""></p>
 </li>
 </ul>
 <blockquote>
@@ -525,7 +552,7 @@ Line 89 terdapat appInputFormat adalah selector pada <strong>input-format.direct
 <li><p>Setelah memahami fungsi dari decorator @HostListener maka untuk berikutnya akan mencoba membuat logika untuk merubah value dar textbox menjadi lowercase.</p>
 </li>
 <li><p>Buka file <strong>input-format.directive.ts</strong> dan modifikasi codenya menjadi seperti berikut.
-![]</p>
+<img src="img/05/27.png" alt=""></p>
 </li>
 </ul>
 <blockquote>
@@ -542,10 +569,10 @@ Line 89 terdapat appInputFormat adalah selector pada <strong>input-format.direct
 <li><p>Atau bisa menggunakan cara lain dengan menggunakan <strong>property binding</strong>.</p>
 </li>
 <li><p>Buka file <strong>app.component.html</strong> dan tambahkan property binding dengan nama format.
-![]</p>
+<img src="img/05/28.png" alt=""></p>
 </li>
 <li><p>Buka file <strong>input-format.directive.ts</strong> tambahkan decorator input dan modifikasi codenya seperti gambar berikut.
-![]</p>
+<img src="img/05/29.png" alt=""></p>
 <blockquote>
 <p><strong>Penjelasan Code</strong>:</p>
 <ol>
@@ -558,7 +585,7 @@ Cat : format disini adalah kondisi di <strong>app.component.html</strong>.</li>
 <li><p>ataupun juga dapat menggunakan cara lain yaitu menggunakan nama selector sebagai property binding.</p>
 </li>
 <li><p>Buka <strong>app.component.html</strong> modifikasi codenya menjadi berikut.
-![]</p>
+<img src="img/05/30.png" alt=""></p>
 </li>
 <li><p>buka <strong>input-format.directive.ts</strong> dan tambahkan decorator input dengan parameter appInputFormat.</p>
 <pre><code class="lang-html">export class InputFormatDirective{
@@ -568,7 +595,7 @@ Cat : format disini adalah kondisi di <strong>app.component.html</strong>.</li>
 </code></pre>
 </li>
 <li><p>Jika dijalankan sebagai contoh masukkan kalimat dengan huruf kecil dan pada saat kita tab akan menjadi huruf besar.
-![]</p>
+<img src="img/05/31.png" alt=""></p>
 </li>
 </ul>
 
@@ -614,7 +641,7 @@ Cat : format disini adalah kondisi di <strong>app.component.html</strong>.</li>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Praktikum 5","level":"1.5","depth":1,"next":{"title":"Praktikum 6","level":"1.6","depth":1,"path":"6.md","ref":"6.md","articles":[]},"previous":{"title":"Praktikum 4","level":"1.4","depth":1,"path":"4.md","ref":"4.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"5.md","mtime":"2019-03-24T19:38:23.583Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-24T19:38:28.532Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Praktikum 5","level":"1.5","depth":1,"next":{"title":"Praktikum 6","level":"1.6","depth":1,"path":"6.md","ref":"6.md","articles":[]},"previous":{"title":"Praktikum 4","level":"1.4","depth":1,"path":"4.md","ref":"4.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"5.md","mtime":"2019-03-30T20:26:21.297Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-24T08:50:46.601Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

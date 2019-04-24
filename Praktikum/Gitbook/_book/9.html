@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Introduction · GitBook</title>
+        <title>Praktikum 9 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,8 +57,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="2.html" />
     
+    <link rel="prev" href="8.html" />
     
 
     </head>
@@ -87,7 +87,7 @@
         
         
     
-        <li class="chapter active" data-level="1.1" data-path="./">
+        <li class="chapter " data-level="1.1" data-path="./">
             
                 <a href="./">
             
@@ -178,7 +178,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8" data-path="9.html">
+        <li class="chapter active" data-level="1.8" data-path="9.html">
             
                 <a href="9.html">
             
@@ -221,7 +221,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Introduction</a>
+        <a href="." >Praktikum 9</a>
     </h1>
 </div>
 
@@ -236,7 +236,113 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="laporan-jobsheet">Laporan Jobsheet</h1>
+                                <h3 id="prakstikum-2--getting-data">PRAKSTIKUM 2 : GETTING DATA</h3>
+<ul>
+<li><p>Buat component baru dengan nama <strong>posts</strong></p>
+</li>
+<li><p>Untuk menggunakan HTTPService, kita perlu melakukan inport HTTP Module pada <strong>app.module.ts</strong>
+<img src="img/09/1.png" alt="">
+Setelah menambahkan HTTP Module pada bagian imports, maka seacara otomatis akan menambahkan pada bagian paling atas.</p>
+</li>
+</ul>
+<blockquote>
+<p>Hint : Jika HTTP Module tidak muncul secara otomatis maka anda harus menginstall terlebih dahulu dengan perintah <strong>npm i @angular/http</strong></p>
+</blockquote>
+<ul>
+<li><p>Modifikasi file <strong>posts.component.ts</strong> menjadi berikut
+<img src="img/09/2.png" alt="">
+Class http pada constructor digunakan untuk melakukan HTTP request ke back end.</p>
+</li>
+<li><p>Ubah file <strong>app.component.html</strong> seperti berikut
+<img src="img/09/3.png" alt=""></p>
+</li>
+<li><p>Jalankan
+<img src="img/09/4.png" alt=""></p>
+</li>
+<li><p>Bagaimana jika anda lupa melakukan import HTTP Module pada langkah ke 2? Lakukan commenting pada HTTP Module seperti pada code berikut
+<img src="img/09/5.png" alt=""></p>
+</li>
+<li><p>Apa yang terjadi pada console? Berikan penjelasan error yang terjadi
+<img src="img/09/6.png" alt=""></p>
+<blockquote>
+<p>Akan terjadi error seperti gambar diatas dikarenakan salah satu modul tidak dapat ditemukan.</p>
+</blockquote>
+</li>
+<li><p>Lengkapi code program pada <strong>posts.component.ts</strong> menjadi
+<img src="img/09/8.png" alt=""></p>
+</li>
+<li><p>Jalankan
+<img src="img/09/7.png" alt="">
+&gt;</p>
+</li>
+<li><p>Jelaskan perbedaan yang terjadi pada console jika code pada <strong>posts.component.ts</strong> diubah menjadi
+<img src="img/09/9.png" alt="">
+&gt;</p>
+</li>
+<li><p>Unuk menampilkan data pada halaman browser, ubah kode program pada <strong>posts.component.html</strong>
+<img src="img/09/10.png" alt=""></p>
+</li>
+<li><p>Ubah code program pada <strong>posts.component.ts</strong>
+<img src="img/09/11.png" alt=""></p>
+</li>
+<li><p>Jalankan
+<img src="img/09/12.png" alt=""></p>
+</li>
+</ul>
+<h3 id="praktikum-3--creating-data">PRAKTIKUM 3 : CREATING DATA</h3>
+<p>Perintah - perintah yang di gunakan untuk melakukan HTTP Request diwakili ileh beberapa kata kerja sebagai berikut.
+| Verb  | Description  |
+|:-:|:-:|
+| <strong>get</strong>  | Get Data  |
+| <strong>post</strong>  | Create Data  |
+| <strong>put</strong>  | Update Data  |
+| <strong>delete</strong>  | Delete Data  |</p>
+<ul>
+<li><p>Tambahkan sebuah text area untuk memalsukan data melalui browser, seperti gambar berikut.
+<img src="img/09/13.png" alt=""></p>
+</li>
+<li><p>Pertama, tambahkan input elemen pada <strong>posts.component.html</strong></p>
+</li>
+<li><p>Modifikasi kode program pada <strong>posts.component.ts</strong></p>
+</li>
+<li><p>Simpan dan jalankan
+<img src="img/09/14.png" alt=""></p>
+</li>
+<li><p>Jelaskan
+&gt;</p>
+</li>
+</ul>
+<h3 id="praktikum-4--updating-data">PRAKTIKUM 4 : UPDATING DATA</h3>
+<ul>
+<li><p>Kita akan menambahkan sebuah button Update untuk mengubah data melalui browser, seperti pada gambar.
+<img src="img/09/15.png" alt=""></p>
+</li>
+<li><p>Tambahkan button update dengan modifikasi code program.</p>
+</li>
+<li><p>Tambahkan fungsi update Post pada <strong>posts.component.ts</strong>
+<img src="img/09/16.png" alt=""></p>
+</li>
+<li><p>Simpan dan jalankan
+<img src="img/09/17.png" alt=""></p>
+</li>
+<li><p>Apa fungsi patch pada potongan program pada langkah 3
+&gt;</p>
+</li>
+</ul>
+<h3 id="praktikum-5--deleting-data">PRAKTIKUM 5 : DELETING DATA</h3>
+<ul>
+<li><p>Tambahkan button Delete</p>
+</li>
+<li><p>Tambahkan fungsi deletePost pada post <strong>post.ts</strong> seperti di bawah:
+<img src="img/09/18.png" alt=""></p>
+</li>
+<li><p>Simpan dan jalankan pada browser
+<img src="img/09/19.png" alt=""></p>
+</li>
+<li><p>Apa fungsi splice pada potongan kode program?
+&gt;</p>
+</li>
+</ul>
 
                                 
                                 </section>
@@ -264,10 +370,10 @@
 
             
                 
-                
-                <a href="2.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Praktikum 2">
-                    <i class="fa fa-angle-right"></i>
+                <a href="8.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Praktikum 8">
+                    <i class="fa fa-angle-left"></i>
                 </a>
+                
                 
             
         
@@ -276,7 +382,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"next":{"title":"Praktikum 2","level":"1.2","depth":1,"path":"2.md","ref":"2.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2019-03-23T16:50:25.067Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-24T08:50:46.601Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Praktikum 9","level":"1.8","depth":1,"previous":{"title":"Praktikum 8","level":"1.7","depth":1,"path":"8.md","ref":"8.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"9.md","mtime":"2019-04-24T08:48:34.322Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-24T08:50:46.601Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
