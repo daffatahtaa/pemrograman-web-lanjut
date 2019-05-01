@@ -1,4 +1,4 @@
-export interface mahasiswa{
+export interface mahasiswa {
     nama_mhs:string;
     pendidikan:{
         nama_jurusan:string;
