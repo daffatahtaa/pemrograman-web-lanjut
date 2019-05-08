@@ -8,3 +8,6 @@
 * [Praktikum 6](6.md)
 * [Praktikum 8](8.md)
 * [Praktikum 9](9.md)
+* [Praktikum 10](10.md)
+* [Praktikum 11](11.md)
+* [Praktikum 12](12.md)
